@@ -1,0 +1,15 @@
+{
+  "type": "module",
+  "name": "cartoonParser2",
+  "version": "1.0.0",
+  "description": "My JavaScript cartoon parser2",
+  "main": "parser2.js",
+  "scripts": {
+    "start": "node parser2.js"
+  },
+  "dependencies": {
+    "mongodb": "^4.0.0",
+    "axios": "^0.21.0",
+    "cheerio": "^1.0.0"
+  }
+}

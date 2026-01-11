@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dataparser
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dataparser
+  template:
+    metadata:
+      labels:
+        app: dataparser
+    spec:
+      containers:
+        - name: dataparser
+          image: 1t1scool/dataparser:latest
+          env:
+            - name: MONGO_URI
+              valueFrom:
+                secretKeyRef:
+                  name: mongo-uri-secret
+                  key: MONGO_URI
